@@ -12,7 +12,7 @@ char inc(char c);		//increment character c
 int getrow(char c);		
 int getcol(char c);		
 void fillmat(char *k);	//fill the matrix
-char * playfare(char *st,int n);//apply encryption on string st
+char * playfair(char *st,int n);//apply encryption on string st
 
 void main(){
 	int i,j,n;
@@ -32,7 +32,7 @@ void main(){
 	printf("\nenter text..\n");
 	scanf("%s",text);
 	text[n]=NULL;
-	ct=playfare(text,n);
+	ct=playfair(text,n);
 	printf("cypher text :- %s",ct);
 }
 
@@ -93,7 +93,7 @@ char inc(char c){//increment c, if new value of c is j then again increment c, r
 	return NULL;
 }
 
-char * playfare(char *s,int n){//apply encryption on string s using matrix mat, return cypher text 
+char * playfair(char *s,int n){//apply encryption on string s using matrix mat, return cypher text 
 	int i,c,r,c0,c1,f,j;
 	char *st;
 	st=(char *)calloc(n*2,sizeof(char));
