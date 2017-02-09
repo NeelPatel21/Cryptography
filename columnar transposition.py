@@ -1,13 +1,10 @@
-def add(f):
-	global pt
-	pt=pt+f;
 pt=(str(input("enter text :- ")))
 l=list(pt)
 for i in range(len(l)):
 	if(l[i]==' '):
 		l[i]='x'
 key=(str(input("enter key :- ")))
-l=l+(['x']*(len(key)-len(pt)%len(key)))
+l=l+(['x']*((len(key)-len(pt)%len(key))%len(key)))
 for x in range(1,len(key)+1):
 	if str(x) not in key :
 		print ('invalid key!!!')
@@ -19,4 +16,4 @@ else :
 	ct=''
 	for i in key:
 		ct=ct+col[int(i)-1]
-	print('cypher text :- ',ct)		
+	print('cypher text :- ',ct)
