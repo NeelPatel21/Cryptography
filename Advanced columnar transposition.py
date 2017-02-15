@@ -12,7 +12,7 @@ for key in keys:
 	for x in range(1,len(key)+1):
 		if str(x) not in key :
 			print ('invalid key!!!')
-			exit;
+			quit();
 	else :
 		col=['']*len(key)
 		for i in range(len(l)):
